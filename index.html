@@ -3,21 +3,6 @@
 <head>
 <title>Graham McBain's amazing Javascript!</title>
 <link id="pagestyle" rel="stylesheet" type="text/css" href="css/demo.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script	src="js/jquery.smint.js" type="text/javascript" ></script>
-<script type="text/javascript">
-//Once the page is loaded(or the html"document" is "ready") the browser will
-// execute this javascript function.
-$(document).ready( function() {
-	//The "smint" plugin extendts the subMenu class and has a
-    $('.subMenu').smint({
-    	'scrollSpeed' : 500
-    });
-});
-
-function swapStyleSheet(sheet){
-	document.getElementById('pagestyle').setAttribute('href', sheet);
-}
 
 </script>
 
@@ -46,12 +31,6 @@ function swapStyleSheet(sheet){
 	<div class="section s1">
 		<div class="inner ">
 			<h1>Lets Change the Style Sheets!</h1>
-			///These are the HTML buttons we'll use to swap the stylesheets
-			///In the "onclick" event we want to call the "swapStyleSheet" function we wrote
-			//in the script tags above! We'll also be passing in the stylesheet we want
-			//to switch to when the button is clicked.
-			<button onclick="swapStyleSheet('css/terrible.css')">Shitty Style Sheet</button>
-			<button onclick="swapStyleSheet('css/demo.css')">Original Sheet</button>
 		</div>
 	</div>
 
