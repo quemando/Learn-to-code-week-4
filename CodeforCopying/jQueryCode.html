@@ -1,0 +1,19 @@
+///This line imports the jQuery library
+<script type="text/javascript" src="js/jquery.min.js"></script>
+///This line imports the SMINT jquery plugin
+<script	src="js/jquery.smint.js" type="text/javascript" ></script>
+///The code below sets the scroll speed for the navigation. The notes will
+///explain more about what this javascript code is doing!
+<script type="text/javascript">
+
+//Once the page is loaded(or the html"document" is "ready") the browser will
+// execute this javascript function.
+$(document).ready( function() {
+	//The "smint" plugin extendts the subMenu class and has a
+    $('.subMenu').smint({
+    	'scrollSpeed' : 1000
+    });
+});
+
+
+</script>

@@ -1,0 +1,16 @@
+//This is the function that looks for the element id ("getElementById")
+//This function takes an argument, we're using the variable "sheet" to
+represent that argument.
+<script>
+function swapStyleSheet(sheet){
+	document.getElementById('pagestyle').setAttribute('href', sheet);
+}
+</script>
+
+///These are the HTML buttons we'll use to swap the stylesheets
+<h2>Javascript Change StyleSheet Without Page Reload</h2>
+///In the "onclick" event we want to call the "swapStyleSheet" function we wrote
+//in the script tags above! We'll also be passing in the stylesheet we want
+//to switch to when the button is clicked.
+<button onclick="swapStyleSheet('darkcss.css')">Dark Style Sheet</button>
+<button onclick="swapStyleSheet('demo.css')">Original Sheet</button>

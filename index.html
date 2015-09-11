@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SMINT | The simple jQuery plugin for lovers of one page websites.</title>
-
-<meta name = "keywords" content = "SMINT jQuery Plugin, SMINT, jQuery Plugin, One Page Website, Sticky Navigation" />
-<meta name = "description" content = "SMINT is a simple plugin for lovers of one page websites, which helps with sticky menus and page scrolling." />
-<meta name="viewport" content="width=device-width">
-
-
-<link href="css/demo.css" rel="stylesheet" type="text/css">
+<title>Graham McBain's amazing Javascript!</title>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="css/demo.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
-
 <script	src="js/jquery.smint.js" type="text/javascript" ></script>
-
 <script type="text/javascript">
-	
-
+//Once the page is loaded(or the html"document" is "ready") the browser will
+// execute this javascript function.
 $(document).ready( function() {
+	//The "smint" plugin extendts the subMenu class and has a
     $('.subMenu').smint({
-    	'scrollSpeed' : 1000
+    	'scrollSpeed' : 500
     });
 });
 
+function swapStyleSheet(sheet){
+	document.getElementById('pagestyle').setAttribute('href', sheet);
+}
 
 </script>
-
 
 </head>
 <body>
 <div class="wrap ">
 	<div class="section sTop">
 		<div class="inner">
-			<h1 class="title">SMINT Demo Page</h1>
-			<h2 class="subtitle">Feel free to use this as your starting template</h2>
+			<h1 class="title">Graham is amazing</h1>
+			<h2 class="subtitle">Lets do some code!</h2>
 		</div>
 	</div>
 
 	<div class="subMenu" >
 	 	<div class="inner">
 	 		<a href="#sTop" class="subNavBtn">Home</a>
-	 		<a href="#s1" class="subNavBtn">Section 1</a> 
-			<a href="#s2" class="subNavBtn">Section 2</a>
-			<a href="#s3" class="subNavBtn">Section 3</a>
-			<a href="#s4" class="subNavBtn">Section 4</a>
-			<a href="#s5" class="subNavBtn">Section 5</a>
-			<a href="https://twitter.com/rabmyself" class="subNavBtn extLink end">External Link</a>
+	 		<a href="#s1" class="subNavBtn">Change Style Sheets!</a>
+			<a href="#s2" class="subNavBtn">BEES</a>
+			<a href="#s3" class="subNavBtn">Eloquent JS</a>
+			<a href="#s4" class="subNavBtn">MOAR Resources</a>
+			<a href="#s5" class="subNavBtn">Lets Do Postino!</a>
+			<a href="https://twitter.com/grahammcbain" class="subNavBtn extLink end">Follow me on twitter!</a>
 		</div>
 	</div>
 
 	<div class="section s1">
 		<div class="inner ">
-			<h1>Section 1</h1>
+			<h1>Lets Change the Style Sheets!</h1>
+			///These are the HTML buttons we'll use to swap the stylesheets
+			///In the "onclick" event we want to call the "swapStyleSheet" function we wrote
+			//in the script tags above! We'll also be passing in the stylesheet we want
+			//to switch to when the button is clicked.
+			<button onclick="swapStyleSheet('css/terrible.css')">Shitty Style Sheet</button>
+			<button onclick="swapStyleSheet('css/demo.css')">Original Sheet</button>
 		</div>
 	</div>
 
 	<div class="section s2">
 		<div class="inner">
-			<h1>Section 2</h1>
-			<p><a href="#s4" class="intLink">Internal Link: Jump to Section 4</a></p>
-			<p><a href="#sTop" class="intLink">Internal Link: Back to Top</a></p>
+			<h1>BEES</h1>
+			<h2><a href="http://beesbeesbees.com/">BEES</a></h2>
 		</div>
 	</div>
 
-
-
 	<div class="section s3">
 		<div class="inner">
-			<h1>Section 3</h1>
+			<h1>Checkout this books on JavaScript!</h1>
+			<a href="http://eloquentjavascript.net/">Eloquent JavaScript</a>
 		</div>
 	</div>
 
 	<div class="section s4">
 		<div class="inner">
-			<h1>Section 4</h1>
+			<h1>Some other amazing resources you should use!</h1>
+				<ul>
+					<li><a href="http://www.meetup.com/bdnewtech/">BDNT Boulder, Denver New Tech</a></li>
+					<li><a href="http://www.meetup.com/Denver-rb/">Denver.rb they have a great beginner track!</a></li>
+					<li><a href="https://try.github.io/levels/1/challenges/1">Try Git!</a></li>
+					<li><a href="http://jsforcats.com/">JavaScript for Cats</a></li>
+					<li><a href="https://www.codeschool.com/courses/git-real">Git Real</a></li>
+					<li><a href="http://discover-devtools.codeschool.com/">Master Chrome Dev Tools</a></li>
+			</ul>
 		</div>
 	</div>
 
 	<div class="section s5">
 		<div class="inner">
-			<h1>Section 5</h1>
+			<h1>Get some Wine this weekend, you've earned it!</h1>
+			<p><a href="www.postinowinecafe.com">Postino Wine Cafe</a> just opened in LoHi!</p>
 		</div>
 	</div>
 
-	
+
 </div>
 
 </body>
